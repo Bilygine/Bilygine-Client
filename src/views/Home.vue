@@ -26,9 +26,9 @@
     <br />
     <br />
     <div v-if="results.length">
-      <p class="title is-4">
+      <div class="title is-4">
         <div class="tag">{{occurencesFound}} occurence(s) from {{results.length}} source(s)</div>
-      </p>
+      </div>
       <br />
       <div class="row columns is-multiline">
         <div v-for="result in results" v-bind:key="result.index" class="column is-one-third">
@@ -66,7 +66,7 @@ export default {
     search () {
       if (this.occurence !== '') {
         axios
-          .get('http://52.215.187.222:8888/find/' + this.occurence)
+          .post('http://localhost:80/api/search/' + this.occurence)
           .then(response => (this.results = response.data))
           .catch(error => console.log(error))
       }

@@ -2,10 +2,7 @@
   <div id="app">
     <navbar></navbar>
     <div class="columns">
-      <div class="column is-2 is-gapless">
-        <sidebar></sidebar>
-      </div>
-      <div class="column is-10 is-gapless">
+      <div class="column is-12 is-gapless">
         <view-content></view-content>
       </div>
     </div>
